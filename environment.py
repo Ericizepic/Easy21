@@ -1,11 +1,13 @@
 import random
 
 class Easy21(object):
+    # give each player their initial cards 
     def __init__(self):
         self.dealer_sum = random.randint(1, 10)
         self.player_sum = random.randint(1, 10)
         self.game_over = False
 
+    # update each players sum
     def hit_player(self):
         new_card = random.randint(1, 10)
         self.player_sum += new_card if random.random() > 1/3 else -1 * new_card

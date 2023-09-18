@@ -10,11 +10,11 @@ class Easy21(object):
     # update each players sum
     def hit_player(self):
         new_card = random.randint(1, 10)
-        self.player_sum += new_card if random.random() > 1/3 else -1 * new_card
+        self.player_sum += new_card if random.random() > 1/5 else -1 * new_card
     
     def hit_dealer(self):
         new_card = random.randint(1, 10)
-        self.dealer_sum += new_card if random.random() > 1/3 else -1 * new_card
+        self.dealer_sum += new_card if random.random() > 1/5 else -1 * new_card
 
     def give_reward(self, do_compare):
         #first check if either player busts

@@ -27,7 +27,7 @@ sticks on any sum of 17 or greater, and hits otherwise. If the dealer goes
 bust, then the player wins; otherwise, the outcome – win (reward +1),
 lose (reward -1), or draw (reward 0) – is the player with the largest sum.
 
-## Result and Analysis
+## Results and Analysis
 First, a model-free monte-carlo controlled reinforcement learning algorithm was trained on an environment following the rules of easy21. The model used a look up table to determine the best possible action at each of the 21 x 10 different states.
 
 Tested on a small batch of 10^7 episodes, the optimal policy π was determined. The following graphs map each state s to a value between [-2, 2] where blue states (s < 0) favour hits and red states (s > 0) favour sticks. The greater the absolute value means the greater the expected reward yielded by picking that action. States close to zero are likely to be losing states regardless of the action chosen.
